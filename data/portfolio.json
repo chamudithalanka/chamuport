@@ -95,14 +95,6 @@
             "image": "images/Salary Monitor.jpg",
             "technologies": ["Github", "React js", "CSS", "JavaScript", "Android App"],
             "link": "https://chamudithalanka.github.io/app/"
-        },
-        {
-            "id": 13,
-            "title": "Shop - ThiAura Int.",
-            "description": "A responsive Shopping web application",
-            "image": "images/A responsive Shopping web application.jpg",
-            "technologies": ["Xml", "Google", "Bolgger"],
-            "link": "https://www.shop.thiaurainternational.com/"
         }
     ]
 } 
