@@ -95,30 +95,6 @@
             "image": "images/Salary Monitor.jpg",
             "technologies": ["Github", "React js", "CSS", "JavaScript", "Android App"],
             "link": "https://chamudithalanka.github.io/app/"
-        },
-        {
-            "id": 10,
-            "title": "Invoice & File Download",
-            "description": "A responsive personal invoice & file download web application with fully functional",
-            "image": "images/Invoice & File Download.jpg",
-            "technologies": ["Github", "HTML", "CSS" , "JavaScript"],
-            "link": "https://chamudithalanka.github.io/download/"
-        },
-        {
-            "id": 11,
-            "title": "Secure Password Generator",
-            "description": "A responsive personal random password generator web application",
-            "image": "images/Random Password Generator.jpg",
-            "technologies": ["Github", "HTML", "CSS" , "JavaScript"],
-            "link": "https://chamudithalanka.github.io/password-generate/"
-        },
-        {
-            "id": 12,
-            "title": "ExpenseTracker Android App",
-            "description": "A responsive personal Expenses Tracking android web app (.apk)",
-            "image": "images/Salary Monitor.jpg",
-            "technologies": ["Github", "React js", "CSS", "JavaScript", "Android App"],
-            "link": "https://chamudithalanka.github.io/app/"
         }
     ]
 } 
