@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Portfolio Items Loading
     const loadPortfolioItems = async () => {
         try {
-            const response = await fetch('./data/portfolio.json');
+            const response = await fetch('https://chamudithalanka.github.io/chamuport/data/portfolio.json');
             const data = await response.json();
             const portfolioContainer = document.querySelector('#portfolio .grid');
             
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             portfolioContainer.innerHTML = `
                 <div class="col-span-full text-center text-red-600">
                     <p>Unable to load portfolio items. Please try again later.</p>
+                    <p class="text-sm mt-2">Error: ${error.message}</p>
                 </div>
             `;
         }
