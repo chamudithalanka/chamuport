@@ -279,6 +279,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
         lazyLoadImages();
     });
+
+    // Scroll to Top Functionality
+    window.addEventListener('DOMContentLoaded', () => {
+        const scrollToTopButton = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.style.opacity = '1';
+                scrollToTopButton.style.visibility = 'visible';
+            } else {
+                scrollToTopButton.style.opacity = '0';
+                scrollToTopButton.style.visibility = 'hidden';
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
 });
 
 // Optional: Add lightbox functionality for graphic design images
