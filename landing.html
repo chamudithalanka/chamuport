@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamuditha Lanka | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-bg {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 20s ease infinite;
+        }
+        .typing-animation::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .scale-up {
+            animation: scaleUp 0.5s ease-in-out;
+        }
+        @keyframes scaleUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen flex items-center justify-center">
+    <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8 m-4 w-full max-w-md shadow-2xl scale-up">
+        <div class="text-center">
+            <!-- Profile Image -->
+            <div class="mb-6 scale-up">
+                <img src="./images/Chamuditha Lanka.png" alt="Chamuditha Lanka" 
+                     class="w-24 h-24 rounded-full mx-auto shadow-lg border-4 border-white object-cover">
+            </div>
+
+            <!-- Name and Title -->
+            <h1 class="text-3xl font-bold text-white mb-2 typing-animation">Chamuditha Lanka</h1>
+            <p class="text-gray-200 mb-6">Software Developer & Designer</p>
+
+            <!-- Loading Animation -->
+            <div class="flex justify-center mb-6">
+                <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-4 mb-6">
+                <a href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fchamudithalanka&sa=D&sntz=1&usg=AOvVaw3vHuA6o3v8JndlFnh1koy9" class="text-white hover:text-gray-300 transform hover:scale-110 transition-all">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fchamuditha-lanka-&sa=D&sntz=1&usg=AOvVaw13TFfO0BjRZYqYV0rMSsOq" class="text-white hover:text-gray-300 transform hover:scale-110 transition-all">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://www.google.com/url?q=https%3A%2F%2Fx.com%2FLankaChamuditha&sa=D&sntz=1&usg=AOvVaw0d_NeEQVRA-R-z5kd3NKxB" class="text-white hover:text-gray-300 transform hover:scale-110 transition-all">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                <div class="bg-blue-600 h-2.5 rounded-full loading-progress" style="width: 0%"></div>
+            </div>
+
+            <!-- Status Text -->
+            <p class="text-white text-sm redirect-text">Redirecting to portfolio...</p>
+        </div>
+    </div>
+
+    <script>
+        // Animate progress bar
+        const progressBar = document.querySelector('.loading-progress');
+        let width = 0;
+        const interval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(interval);
+            } else {
+                width += 1.5;
+                progressBar.style.width = width + '%';
+            }
+        }, 55);
+
+        // Typing animation for redirect text
+        const redirectText = document.querySelector('.redirect-text');
+        const texts = ['Preparing amazing content...', 'Loading portfolio...', 'Almost there...'];
+        let textIndex = 0;
+
+        setInterval(() => {
+            redirectText.textContent = texts[textIndex];
+            textIndex = (textIndex + 1) % texts.length;
+        }, 1200);
+
+        // Primary redirect
+        setTimeout(function() {
+            window.location.href = "https://bit.ly/cha-portfolio";
+        }, 4000);
+
+        // Backup redirect
+        setTimeout(function() {
+            window.location.replace("https://bit.ly/cha-portfolio");
+        }, 4500);
+
+        // Meta refresh backup
+        document.head.innerHTML += '<meta http-equiv="refresh" content="5;url=https://bit.ly/cha-portfolio">';
+    </script>
+</body>
+</html>
